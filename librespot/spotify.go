@@ -37,3 +37,8 @@ func LoginDiscoveryBlobFile(cacheBlobPath string, deviceName string) (*core.Sess
 func LoginOAuth(deviceName string, clientId string, clientSecret string) (*core.Session, error) {
 	return core.LoginOAuth(deviceName, clientId, clientSecret)
 }
+
+// Login to Spotify using an existing accessToken
+func LoginOAuthToken(accessToken string, deviceName string) (*core.Session, error) {
+	return core.LoginOAuthToken(accessToken, deviceName)
+}
